@@ -7,6 +7,3 @@ downloads/
 cache/
 runs/
 outputs/
-
-# re-include (the repository root ignores metrics*)
-!atlas/metrics.py

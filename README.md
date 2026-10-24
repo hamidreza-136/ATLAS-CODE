@@ -20,8 +20,8 @@ Benchmarks: Ref-DAVIS17, ReasonVOS, ReVOS, MeViS, Ref-YouTube-VOS.
 ## Installation
 
 ```bash
-git clone https://github.com/hamidreza-dastmalchi/ATLAS.git
-cd ATLAS/ATLAS
+git clone https://github.com/hamidreza-136/ATLAS-CODE.git
+cd ATLAS-CODE
 python3.12 -m venv .venv && source .venv/bin/activate
 
 # PyTorch for your CUDA version (tested: 2.11.0 + CUDA 12.8)
