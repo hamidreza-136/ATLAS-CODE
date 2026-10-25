@@ -73,6 +73,14 @@ datasets/
 ```bash
 mkdir -p datasets downloads
 
+# Ref-YouTube-VOS (community mirror of the official challenge files; only train, valid and meta_expressions are needed)
+hf download blue7012/ref-youtube-vos train_data/train.zip train_data/valid.zip valid_data/meta_expressions.zip \
+  --repo-type dataset --local-dir downloads/ref-youtube-vos
+mkdir -p datasets/ref-youtube-vos
+unzip -q downloads/ref-youtube-vos/train_data/train.zip -d datasets/ref-youtube-vos
+unzip -q downloads/ref-youtube-vos/train_data/valid.zip -d datasets/ref-youtube-vos
+unzip -q downloads/ref-youtube-vos/valid_data/meta_expressions.zip -x "__MACOSX/*" "*.DS_Store" -d datasets/ref-youtube-vos
+
 # Ref-DAVIS17 and ReasonVOS (packaged with mask dictionaries by DecAF)
 hf download js-hyun/decaf_data --repo-type dataset --local-dir downloads/decaf_data
 tar -xf downloads/decaf_data/RVOSJoint/davis17_data.tar   -C datasets
@@ -89,9 +97,10 @@ mv downloads/mevis/MeViS_release datasets/mevis
 for s in valid valid_u; do tar -xf datasets/mevis/$s/JPEGImages.tar -C datasets/mevis/$s && rm datasets/mevis/$s/JPEGImages.tar; done
 ```
 
-Ref-YouTube-VOS (training set and validation set) is distributed through the
-[official challenge page](https://youtube-vos.org/dataset/rvos/); place it in
-`datasets/ref-youtube-vos/` with the layout above.
+Ref-YouTube-VOS is also distributed through the
+[official challenge page](https://youtube-vos.org/dataset/rvos/) (registration
+required); its `train.zip`, `valid.zip` and `meta_expressions.zip` unpack to the
+same layout.
 
 ## Running
 
