@@ -4,7 +4,7 @@
 #
 # Usage:   GPUS="0 1 2 3" bash scripts/reproduce.sh <lvlm> [dataset ...]
 #   Default datasets: davis reasonvos revos mevis ytvos_valid mevis_valid
-#   Set SKIP_TRAIN=1 to use an existing / downloaded runs/<lvlm>/adapter.pt.
+#   Set SKIP_TRAIN=1 to use an existing runs/<lvlm>/adapter.pt.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 

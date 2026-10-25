@@ -57,12 +57,6 @@ hf download OpenGVLab/InternVL3-8B-hf               --local-dir ckpts/InternVL3-
 wget -O ckpts/sam2_hiera_large.pt https://dl.fbaipublicfiles.com/segment_anything_2/072824/sam2_hiera_large.pt
 ```
 
-Trained ATLAS adapters (`runs/<lvlm>/adapter.pt`) are on Hugging Face:
-
-```bash
-hf download <HF_USER>/ATLAS --local-dir runs   # TODO: replace with the released model repository
-```
-
 ## Data
 
 Datasets go into `datasets/` (override with `ATLAS_DATA_ROOT`):
@@ -122,7 +116,7 @@ Or run everything for one LVLM (training plus all six evaluation sets):
 
 ```bash
 GPUS="0 1 2 3" bash scripts/reproduce.sh $LVLM
-SKIP_TRAIN=1 GPUS="0 1 2 3" bash scripts/reproduce.sh $LVLM davis reasonvos   # with downloaded adapters
+SKIP_TRAIN=1 GPUS="0 1 2 3" bash scripts/reproduce.sh $LVLM davis reasonvos   # reuse already-trained adapters
 ```
 
 Evaluation sets: `davis`, `reasonvos`, `revos` (referring / reasoning / overall),

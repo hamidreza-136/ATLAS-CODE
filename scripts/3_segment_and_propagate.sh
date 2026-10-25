@@ -2,7 +2,7 @@
 # Stages 2 + 3 at test time - attention adaptation, then segmentation and
 # propagation with SAM2 (Sec. 3.3-3.4), followed by J&F evaluation.
 # Requires: bash scripts/1_extract_attention.sh <lvlm> <dataset>
-#           runs/<lvlm>/adapter.pt (trained or downloaded; override with ADAPTER=...)
+#           runs/<lvlm>/adapter.pt (from stage 2; override with ADAPTER=...)
 #
 # Usage:   GPUS="0 1 2 3" bash scripts/3_segment_and_propagate.sh <lvlm> <dataset>
 # Output:  outputs/<lvlm>/<dataset>/<video>/<exp_id>/<frame>.png
