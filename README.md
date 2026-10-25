@@ -181,11 +181,11 @@ video. If that score is below 0.1, the prediction is empty.
 ## Citation
 
 ```bibtex
-@inproceedings{dastmalchi2027atlas,
-  title     = {{ATLAS}: Learning to Adapt {LVLM} Attention for Reasoning Video Segmentation},
-  author    = {Dastmalchi, Hamidreza and Cheraghian, Ali and An, Aijun and Khamis, Abdelwahed and Petersson, Lars},
-  booktitle = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-  year      = {2027}
+@article{dastmalchi2026atlas,
+  title={ATLAS: Learning to Adapt LVLM Attention for Reasoning Video Segmentation},
+  author={Dastmalchi, Hamidreza and Cheraghian, Ali and An, Aijun and Khamis, Abdelwahed and Petersson, Lars},
+  journal={arXiv preprint arXiv:2610.24783},
+  year={2026}
 }
 ```
 
